@@ -67,9 +67,9 @@ function tentukan_nilai($nilai) {
 }
 
 // Hapus komentar di bawah ini untuk jalankan code
-// echo tentukan_nilai(98); //Sangat Baik
-// echo tentukan_nilai(76); //Baik
-// echo tentukan_nilai(67); //Cukup
-// echo tentukan_nilai(43); //Kurang
+echo tentukan_nilai(98); //Sangat Baik
+echo tentukan_nilai(76); //Baik
+echo tentukan_nilai(67); //Cukup
+echo tentukan_nilai(43); //Kurang
 
 ?>
