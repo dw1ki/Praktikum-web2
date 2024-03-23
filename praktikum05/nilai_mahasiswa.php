@@ -77,9 +77,14 @@
                     <label for="mk" class="col-4 col-form-label">Pilih MK</label>
                     <div class="col-8">
                         <select id="mk" name="mk" class="custom-select">
-                            <option value="pemweb2">Pemrograman Web2</option>
-                            <option value="jarkom">Jaringan Komputer</option>
-                            <option value="statprob">Statistika & Probabilitas</option>
+                            <option value="Pemrograman Web 2">Pemrograman Web 2</option>
+                            <option value="Jaringan Komputer">Jaringan Komputer</option>
+                            <option value="Statistika & Probabilitas">Statistika & Probabilitas</option>
+                            <option value="Basis Data">Basis Data</option>
+                            <option value="Bahasa Inggris 1">Bahasa Inggris 1</option>
+                            <option value="Komunikasi Efektif">Komunikasi Efektif</option>
+                            <option value="User Interface/User Experience">User Interface/User Experience</option>
+                            <option value="PKN">PKN</option>
                         </select>
                     </div>
                 </div>
