@@ -1,0 +1,78 @@
+body {
+    background-color: #f0f2f5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  .form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    color:#967BB6;
+    font-weight: bolder;
+  }
+  .form-group label {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #654EA3;
+  }
+  .btn-primary {
+    background-color:#967BB6;
+    border-color: #967BB6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+  }
+  .btn-primary:hover {
+    background-color: #967BB6;
+    border-color: #967BB6;
+  }
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.card-body {
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+}
+.result-item {
+    margin-bottom: 10px;
+}
+.result-label {
+    font-weight: bolder;
+    color:#967BB6 ;
+    margin-right: 5px;
+}
+.fa {
+    margin-right: 5px;
+    color:#D4A8FF;
+}
+.card-header h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    color: #967BB6 ;
+    text-align: center;
+    font-weight: bolder;
+}
+.card-header h2 i:first-child {
+    margin-right: 10px; 
+}
+.card-header h2 i:last-child {
+    margin-left: 10px; 
+}
