@@ -1,7 +1,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://instagram.com/ckmeiliaa._">Cikameiliaa</a></span>
+            <span>Copyright &copy; <a href="https://instagram.com/dwikidharmawan">Dwiki Kurniawan</a></span>
         </div>
     </div>
 </footer>

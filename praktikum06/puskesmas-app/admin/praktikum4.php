@@ -26,12 +26,12 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Praktikum 1</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Praktikum 4</h1>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
-                        <?php include_once('../../../praktikum01/nilai.php') ?>
+                        <?php include_once('../../../praktikum04/login.html') ?>
                     </div>
 
                 </div>

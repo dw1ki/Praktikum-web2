@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once('include/meta.php') ?>
+<?php
+include_once('../include/meta.php');
+require_once('../dbkoneksi.php');
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
+    $nama = $_POST['nama'];
+
+    $sql = "UPDATE unit_kerja SET nama = :nama WHERE id = :id";
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(':nama', $nama);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+
+    echo '<meta http-equiv="refresh" content="0; url=index.php"><script>alert("Data berhasil diubah")</script>';
+}
+
+if (isset($_GET['id'])) {
+    $sql = "SELECT * FROM unit_kerja WHERE id = :id";
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(':id', $_GET['id']);
+    $stmt->execute();
+    $data = $stmt->fetch();
+}
+?>
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?php include_once('include/header.php') ?>
+        <?php include_once('../include/header.php') ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -18,7 +41,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include_once('include/sidebar.php') ?>
+                <?php include_once('../include/sidebar.php') ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -26,12 +49,23 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Praktikum 1</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Edit Unit Kerja</h1>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
-                        <?php include_once('../../../praktikum01/nilai.php') ?>
+                        <div class="card col-md-12">
+                            <div class="card-body">
+                                <form action="" method="post">
+                                    <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                                    <div class="form-group">
+                                        <label for="nama">Nama Unit Kerja</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" value="<?= $data['nama'] ?>" required>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Update</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -41,7 +75,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include_once('include/footer.php') ?>
+            <?php include_once('../include/footer.php') ?>
             <!-- End of Footer -->
 
         </div>
@@ -73,23 +107,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 

@@ -3,6 +3,8 @@ $praktikum = [
     "praktikum1" => "praktikum1.php",
     "praktikum2" => "praktikum2.php",
     "praktikum3" => "praktikum3.php",
+    "praktikum4" => "praktikum4.php",
+    "praktikum5" => "praktikum5.php"
 ]
 ?>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -12,7 +14,7 @@ $praktikum = [
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">D' <sup>Project</sup></div>
     </a>
 
     <!-- Divider -->
@@ -81,7 +83,7 @@ $praktikum = [
             <span>Paramedik</span>
         </a>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="<?=$url ?>unitkerja">
+        <a class="nav-link collapsed" href="<?=$url ?>unit_kerja">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Unit Kerja</span>
         </a>
