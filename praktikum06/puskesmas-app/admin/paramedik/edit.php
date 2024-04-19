@@ -92,11 +92,11 @@ if (isset($_GET['id'])) {
                                 <form action="" method="post">
 
                                     <div class="form-group">    
-                                        <label for="nama">Nama Pasien</label>
+                                        <label for="nama">Nama Paramedik</label>
                                         <input type="text" class="form-control" id="nama" name="nama" value="<?= isset($data['nama']) ? $data['nama'] : '' ?>" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="gender">Gender Pasien</label>
+                                        <label for="gender">Gender</label>
                                         <input type="text" class="form-control" id="gender" name="gender" value="<?= isset($data['gender']) ? $data['gender'] : '' ?>" required>
                                     </div>
                                     <div class="form-group">
