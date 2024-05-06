@@ -1,0 +1,79 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.banner {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv98tYD0rgB9FzcayVjATiCZYFQ_RBze-l2DVEaaaJVROWjC_TDfuYNPhOAYlgTI2YcJOzasJD0IGMoVXjBPEbFoMtOK9zr_AwtirKGp2EKEmDPRAluBHXPb7ebTT5S3go9sE0nDI6c3H_/s1920/general-practice-doctor-1920x1080.jpg") 
+        no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #000;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.lingkaran {
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    color: #FFF;
+    background-color: #0d6efd;
+}
+
+.lingkaran i {
+    position: relative;
+    top: 30px;
+}
+
+.crop-img {
+    object-fit: cover;
+}
+
+.tim img {
+    width: 250px;
+    border: 10px solid #cccccc;
+  }
+  
+  a.social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #333;
+    line-height: 40px;
+  }
+  
+  .client img {
+    height: auto;
+    max-height: 50px;
+  }
+  
+  .kontak {
+    background: url("https://wallpaperaccess.com/full/1867010.jpg") no-repeat
+      center center;
+    background-size: cover;
+    padding-bottom: 20%;
+    padding-top: 20%;
+    color: #fff;
+  }
+
+.footer {
+    background-color: #0d6efd;
+    color: #FFF;
+}
