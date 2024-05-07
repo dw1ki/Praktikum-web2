@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Bulan Mei 2024 pada 19.14
+-- Waktu pembuatan: 07 Bulan Mei 2024 pada 03.12
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -62,6 +62,15 @@ CREATE TABLE `paramedik` (
   `unit_kerja_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `paramedik`
+--
+
+INSERT INTO `paramedik` (`id`, `nama`, `gender`, `tmp_lahir`, `tgl_lahir`, `kategori`, `telpon`, `alamat`, `unit_kerja_id`) VALUES
+(1, 'dr. Andi Putra', 'L', 'Jakarta', '1990-07-22', 'Dokter Umum', '088122342312', 'Jl. Krukut', 1),
+(2, 'dr. Muklis, Sp.PD.', 'L', 'Bogor', '1985-03-04', 'Dokter Spesialis', '083443273287', 'Jl. Lenteng Agung', 2),
+(3, 'dr. Indah Maria, Sp.B', 'P', 'Bandung', '1995-03-31', 'Dokter Bedah', '081234345454', 'Jl. Haji Ipong', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -108,6 +117,13 @@ CREATE TABLE `periksa` (
   `dokter_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `periksa`
+--
+
+INSERT INTO `periksa` (`id`, `tanggal`, `berat`, `tinggi`, `tensi`, `keterangan`, `pasien_id`, `dokter_id`) VALUES
+(2, '2024-03-05', 65, 170, '180', 'Demam', 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -118,6 +134,37 @@ CREATE TABLE `unit_kerja` (
   `id` int(11) NOT NULL,
   `nama` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `unit_kerja`
+--
+
+INSERT INTO `unit_kerja` (`id`, `nama`) VALUES
+(1, 'Poli Umum'),
+(2, 'IGD'),
+(3, 'UGD');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` enum('admin','user') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`, `role`) VALUES
+(6, 'admin@gmail.com', '$2y$10$LKY2/asJ6bhr2nXsLY/1OeOf.iSBTvImC38DZCT15oZu23SVTfWii', 'admin'),
+(15, 'user@gmail.com', '$2y$10$RCqtzI3KlT.C3WFONHxhHO5/P6cYkqA6F0gGk5ABx2xyNO6lXcSX6', 'user'),
+(16, 'user2@gmail.com', '$2y$10$fhajqnc9XCowuQa/UKNkXOvrFMxFyjMeQstxU74j7uZKUGWVaOnlK', 'user');
 
 --
 -- Indexes for dumped tables
@@ -158,6 +205,13 @@ ALTER TABLE `unit_kerja`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -165,31 +219,37 @@ ALTER TABLE `unit_kerja`
 -- AUTO_INCREMENT untuk tabel `kelurahan`
 --
 ALTER TABLE `kelurahan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `paramedik`
 --
 ALTER TABLE `paramedik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `periksa`
 --
 ALTER TABLE `periksa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `unit_kerja`
 --
 ALTER TABLE `unit_kerja`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
