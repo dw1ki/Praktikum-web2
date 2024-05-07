@@ -6,7 +6,6 @@ if( isset($_POST["email"]) ) {
 
   $email = $_POST["email"];
   $password = $_POST["password"];
-
   $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' ");
   
 
@@ -18,7 +17,7 @@ if( isset($_POST["email"]) ) {
 
       if($row['role']=="admin" && password_verify($password, $row["password"])){
  
-        // buat session login dan username
+        // buat session login
         $_SESSION['email'] = $email;
         $_SESSION['role'] = "admin";
         // alihkan ke halaman dashboard admin
@@ -30,16 +29,15 @@ if( isset($_POST["email"]) ) {
         // alihkan ke halaman login kembali
         header("location:index.php");
       }	else {
-        header("location:login.php?pesan=gagal"); 
-        exit;
+        $error = true; 
       }
-      // if ( password_verify($password, $row["password"]) ) {
-      //   header("Location: index.html");
-      //   exit;
-      // }
+      
     }
 
-    $error = true;
+    else {
+      $error = true;
+    }
+    
   }
 
 ?>
@@ -70,11 +68,12 @@ if( isset($_POST["email"]) ) {
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-    <?php if( isset($error) ) :  
-        echo "Username / Password tidak sesuai"
-      ?>
+      <?php if(isset($error)): ?>
+        <span style="color: red;">
+          Email / Password tidak sesuai
+        </span>
+      <?php endif; ?>
 
-    <?php endif; ?>
 
       <form action="" method="post">
         <div class="input-group mb-3">

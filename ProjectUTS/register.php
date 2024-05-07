@@ -1,13 +1,18 @@
 <?php
+session_start();
+
 require 'functions.php';
 
 
 if( isset($_POST["register"]) ) {
 
     if( registrasi($_POST) > 0 ) {
+        $email = $_POST["email"]; // Ambil email dari formulir
         echo "<script>
-                alert('user baru berhasil ditambahkan!');
+                alert('User berhasil ditambahkan!');
+                window.location.href = 'login.php?email=' + encodeURIComponent('$email');
               </script>";
+
     } else {
         echo mysqli_error($conn);
     }
