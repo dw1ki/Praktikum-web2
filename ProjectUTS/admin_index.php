@@ -31,9 +31,9 @@ require_once 'admin_sidebar.php';
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150.000</h3>
+                <h3>150</h3>
 
-                <p>Unit Kerja</p>
+                <p>Work Unit</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>

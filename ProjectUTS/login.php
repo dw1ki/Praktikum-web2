@@ -66,7 +66,7 @@ if( isset($_POST["email"]) ) {
       <a href="index.html" class="h1"><b>MedWiki</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Log in to start your session</p>
 
       <?php if(isset($error)): ?>
         <span style="color: red;">
@@ -95,7 +95,7 @@ if( isset($_POST["email"]) ) {
         <div class="row">      
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
           </div>
           <!-- /.col -->
         </div>

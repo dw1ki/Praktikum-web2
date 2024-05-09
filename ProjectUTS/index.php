@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedWiki</title>
 
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-      rel="stylesheet" 
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-      crossorigin="anonymous">
+     <title>MedWiki</title>
+<!--
 
-    <script src="https://kit.fontawesome.com/1b284c6d92.js" crossorigin="anonymous"></script>
+Template 2098 Health
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+     <link rel="stylesheet" href="assets/css/animate.css">
+     <link rel="stylesheet" href="assets/css/owl.carousel.css">
+     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="assets/css/tooplate-style.css">
+
 </head>
-<body>
-  <?php 
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<?php 
 	session_start();
  
 	// cek apakah yang mengakses halaman ini sudah login
@@ -28,194 +37,444 @@
 		header("location:login.php");
 	}
  
-	?>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-primary bg-light shadow-lg fixed-top">
-        <div class="container">
-          <a class="navbar-brand poppins-extrabold" href="index.html">
-            <i class="fa-solid fa-notes-medical"></i>
-            MedWiki
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse text-right" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="book.php">Booking</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#doctors">Doctors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-            <a class="btn btn-primary" href="logout.php" role="button">Logout</a>            
-          </div>
-        </div>
-      </nav>
-      <!-- Banner -->
-    <div class="container-fluid banner">
-        <div class="container text-center">
-            <h4 class="display-6 poppins-medium">We Are Always Ready To Help You & Your Family</h4>
-            <h3 class="display-1 poppins-medium">We Offer Different Services To Improve Your Health</h3>
-            <a href="book.php">
-                <button type="button" class="btn btn-primary btn-lg">
-                    Book/Register Here!
-                </button>
-            </a>
-        </div>
-    </div>
-    <!-- Services -->
-    <div class="container-fluid services pt-5 pb-5" id="services">
-      <div class="container text-center">
-        <h2 class="display-3 poppins-medium">Services</h2>
-        <p>The hospital provides advanced and compassionate care.</p>
-        <div class="row pt-4">
-          <div class="col-md-4">
-            <span class="lingkaran"><i class="fa-solid fa-truck-medical fa-5x"></i></span>
-            <h3 class="mt-3">Emergency Help</h3>
-            <p>
-              We deliver swift care for emergencies while focusing on personalized treatment and preventive health measures.
-            </p>
-          </div>
+?>
 
-          <div class="col-md-4">
-            <span class="lingkaran"><i class="fa-solid fa-hospital fa-5x"></i></span>
-            <h3 class="mt-3">Enriched Pharmecy</h3>
-            <p>
-              Enriched Pharmacy prioritizes personalized care and preventive measures for patient well-being.
-            </p>
-          </div>
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
 
-          <div class="col-md-4">
-            <span class="lingkaran"><i class="fa-solid fa-stethoscope fa-5x"></i></span>
-            <h3 class="mt-3">Medical Treatment</h3>
-            <p>
-              Tailored health interventions utilize evidence-based approaches, customizing treatments to individual needs for optimal.
-            </p>
+               <span class="spinner-rotate"></span>
+               
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Doctors -->
-    <div class="container-fluid pt-5 pb-5 bg-light" id="doctors">
-      <div class="container text-center">
-        <h2 class="display-3 poppins-medium">Doctors</h2>
-        <p>
-          Meet our qualified team, schedule appointments, and explore our medical services.
-        </p>
-        <div class="row pt-4 gx-4 gy-4">
-          <div class="col-md-4 text-center tim">
-            <img
-              src="assets/img/dokter1.png"
-              class="rounded-circle mb-3"
-            />
-            <h4>dr. Andi Putra</h4>
-            <p>Dokter Umum</p>            
+     </section>
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.php" class="navbar-brand">MedWiki</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a href="#team" class="smoothScroll">Doctors</a></li>
+                         <li><a href="#news" class="smoothScroll">News</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li><a href="#appointment" class="smoothScroll">Make an appointment</a></li>
+                         <li class="appointment-btn"><a href="logout.php">Logout</a></li>
+                    </ul>
+               </div>
+
           </div>
-          <div class="col-md-4 text-center tim">
-            <img
-              src="assets/img/dokter2.jpg"
-              class="rounded-circle mb-3"
-            />
-            <h4>dr. Muklis, Sp.PD.</h4>
-            <p>Dokter Spesialis Penyakit Dalam</p>           
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Let's make your life happier</h3>
+                                             <h1>Healthy Living</h1>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Aenean luctus lobortis tellus</h3>
+                                             <h1>New Lifestyle</h1>
+                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Pellentesque nec libero nisi</h3>
+                                             <h1>Your Health Benefits</h1>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
           </div>
-          <div class="col-md-4 text-center tim">
-            <img
-              src="assets/img/dokter3.jpg"
-              class="rounded-circle mb-3"
-            />
-            <h4>dr. Indah Maria, Sp.B</h4>
-            <p>Dokter Spesialis Bedah Umum</p>            
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ealth Center</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
+                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+                                   <figcaption>
+                                        <h3>Dr. Neil Jackson</h3>
+                                        <p>General Principal</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+                    
+               </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- About -->
-    <div class="container-fluid pt-5 pb-5" id="about">
-      <div class="container">
-        <h2 class="display-3 text-center poppins-medium">About</h2>
-        <p class="text-center">
-          Learn more about who we are, our mission, and our commitment to providing exceptional service and care.
-        </p>
-        <div class="clearfix pt-5">
-          <img 
-            src="https://awsimages.detik.net.id/visual/2021/10/12/dato-sri-tahir-melalui-tahir-foundation-hari-ini-mengumumkan-hibah-senilai-rp-10-miliar-sekitar-us-700000-untuk-mendukung-resp-6_169.jpeg?w=650" 
-            class="col-md-6 float-md-end mb-3 crop-img"
-            width="300" 
-            height="300">
-          <p>
-            At our community health center, we are dedicated to delivering accessible primary healthcare services to all residents.
-          </p>
-          <p>
-            Our team of healthcare professionals is committed to promoting wellness and improving health outcomes through comprehensive care and preventive measures.
-          </p>
-          <p>
-            Through collaborative efforts and community-focused initiatives, we strive to address the diverse healthcare needs of our population and enhance the overall well-being of our community.
-          </p>
-          <p>
-            Together, we work towards a healthier tomorrow for everyone.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Contact Us -->
-    <div class="container-fluid pt-5 pb-5 kontak" id="contact">
-      <div class="container">
-        <h2 class="display-3 text-center poppins-medium">Contact Us</h2>
-        <p class="text-center">
-          Get in touch for assistance or appointments. We're here to help.
-        </p>
-        <div class="row pb-3">
-          <div class="col-md-6">
-            <input
-              class="form-control form-control-lg mb-3"
-              type="text"
-              placeholder="Nama"
-            />
-            <input
-              class="form-control form-control-lg mb-3"
-              type="text"
-              placeholder="Email"
-            />
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              placeholder="No. Phone"
-            />
+     </section>
+
+
+     <!-- TEAM -->
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Our Doctors</h2>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="assets/images/team-image1.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Nate Baston</h3>
+                                        <p>General Principal</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="assets/images/team-image2.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Jason Stewart</h3>
+                                        <p>Pregnancy</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <img src="assets/images/team-image3.jpg" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Miasha Nakahara</h3>
+                                        <p>Cardiology</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+                    
+               </div>
           </div>
-          <div class="col-md-6">
-            <textarea class="form-control form-control-lg" rows="5" placeholder="Silahkan isi komentar anda"></textarea>
+     </section>
+
+
+     <!-- NEWS -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Latest News</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="assets/images/news-image1.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>March 08, 2018</span>
+                                   <h3><a href="news-detail.html">About Amazing Technology</a></h3>
+                                   <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                                   <div class="author">
+                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jeremie Carlson</h5>
+                                             <p>CEO / Founder</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="assets/images/news-image2.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>February 20, 2018</span>
+                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
+                                   <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+                                   <div class="author">
+                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jason Stewart</h5>
+                                             <p>General Director</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="assets/images/news-image3.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>January 27, 2018</span>
+                                   <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
+                                   <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+                                   <div class="author">
+                                        <img src="assets/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
           </div>
-        </div>
-        <div class="col-md-3 mx-auto text-center">
-          <button type="button" class="btn btn-primary btn-lg">
-            Kirim Pesan
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <div class="container-fluid footer">
-      <div class="container text-center pt-5 pb-5">
-        Copyright 2024 | All Rights Reserved by Dwiki Kurniawan
-      </div>
-    </div>
-    
-    <script 
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-      crossorigin="anonymous">
-    </script>
+     </section>
+
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="assets/images/appointment-image.jpg" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Make an appointment</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Select Date</label>
+                                        <input type="date" name="date" value="" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Select Department</label>
+                                        <select class="form-control">
+                                             <option>General Health</option>
+                                             <option>Cardiology</option>
+                                             <option>Dental</option>
+                                             <option>Medical Research</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                        <label for="Message">Additional Message</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                   </div>
+                              </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+     <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>           
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="assets/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="assets/images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Sunday <span>Closed</span></p>
+                              </div> 
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2018 Your Company 
+                                   
+                                   | Design: Tooplate</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   <a href="#">Laboratory Tests</a>
+                                   <a href="#">Departments</a>
+                                   <a href="#">Insurance Policy</a>
+                                   <a href="#">Careers</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="assets/js/jquery.js"></script>
+     <script src="assets/js/bootstrap.min.js"></script>
+     <script src="assets/js/jquery.sticky.js"></script>
+     <script src="assets/js/jquery.stellar.min.js"></script>
+     <script src="assets/js/wow.min.js"></script>
+     <script src="assets/js/smoothscroll.js"></script>
+     <script src="assets/js/owl.carousel.min.js"></script>
+     <script src="assets/js/custom.js"></script>
 
 </body>
 </html>
