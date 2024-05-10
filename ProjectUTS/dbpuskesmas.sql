@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Bulan Mei 2024 pada 03.12
+-- Waktu pembuatan: 10 Bulan Mei 2024 pada 05.56
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -141,8 +141,7 @@ CREATE TABLE `unit_kerja` (
 
 INSERT INTO `unit_kerja` (`id`, `nama`) VALUES
 (1, 'Poli Umum'),
-(2, 'IGD'),
-(3, 'UGD');
+(2, 'IGD');
 
 -- --------------------------------------------------------
 
@@ -163,8 +162,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `email`, `password`, `role`) VALUES
 (6, 'admin@gmail.com', '$2y$10$LKY2/asJ6bhr2nXsLY/1OeOf.iSBTvImC38DZCT15oZu23SVTfWii', 'admin'),
-(15, 'user@gmail.com', '$2y$10$RCqtzI3KlT.C3WFONHxhHO5/P6cYkqA6F0gGk5ABx2xyNO6lXcSX6', 'user'),
-(16, 'user2@gmail.com', '$2y$10$fhajqnc9XCowuQa/UKNkXOvrFMxFyjMeQstxU74j7uZKUGWVaOnlK', 'user');
+(15, 'user@gmail.com', '$2y$10$RCqtzI3KlT.C3WFONHxhHO5/P6cYkqA6F0gGk5ABx2xyNO6lXcSX6', 'user');
 
 --
 -- Indexes for dumped tables
@@ -219,7 +217,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `kelurahan`
 --
 ALTER TABLE `kelurahan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `paramedik`
@@ -237,7 +235,7 @@ ALTER TABLE `pasien`
 -- AUTO_INCREMENT untuk tabel `periksa`
 --
 ALTER TABLE `periksa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `unit_kerja`
@@ -249,7 +247,7 @@ ALTER TABLE `unit_kerja`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
